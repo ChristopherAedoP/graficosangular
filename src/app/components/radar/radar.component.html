@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-8">
+
+      <div style="display: block">
+        <canvas
+          baseChart
+          [datasets]="radarChartData"
+          [labels]="radarChartLabels"
+          [chartType]="radarChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"
+        ></canvas>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <button
+        (click)="randomize()"
+        type="button"
+        class="btn btn-primary"
+      >Actualizar</button>
+    </div>
+</div>
